@@ -39,7 +39,7 @@ class StarSpace {
         std::vector<Base>& ids,
         const std::string& sep);
 
-    void nearestNeighbor(const std::string& line, int k);
+    std::string nearestNeighbor(const std::string& line, int k);
 
     void saveModel(const std::string& filename);
     void saveModelTsv(const std::string& filename);
