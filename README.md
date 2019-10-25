@@ -48,9 +48,20 @@ In order to build StarSpace on Mac OS or Linux, use the following:
     cd Starspace
     make
 
-In order to build StarSpace on Windows, open the following in Visual Studio:
+In order to build StarSpace on Windows:
 
-    MVS\StarSpace.sln
+	clone https://github.com/facebookresearch/Starspace.git
+	Follow instructions on how to install boost
+	open MVS\Starspace.sln in Visual Studio
+	Update all project properties: go to Configuration Properties>VC++ Directories and add boost dirs:
+		- Include Directories => <boost_dir>\<boost_version_dir>
+		- Library Directories => <boost_dir>\<boost_version_dir>\stage\lib
+	In Configurations Properties check:
+		- Windows SDK Versions => should be one installed on your computer
+		- Platform Toolset => should be one installed on your computer
+	Optional: if GoogleTest is not installed in the computer unload "matrix_test" and "proj_test"
+	Build the solution
+	
 In order to build StarSpace python wrapper, please refer <a href="https://github.com/facebookresearch/StarSpace/tree/master/python">README</a> inside the directory <a href="https://github.com/facebookresearch/StarSpace/tree/master/python">python</a>.
 
 # File Format
