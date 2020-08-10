@@ -24,45 +24,9 @@ See the [paper](https://arxiv.org/abs/1709.03856) for more details on how it wor
 - StarSpace training is much faster now with mini batch training (setting batch size by "-batchSize" argument). Details in [#190](https://github.com/facebookresearch/StarSpace/pull/190).
 - We added support for real-valued input and label weights: checkout the <a href="https://github.com/facebookresearch/StarSpace/#file-format">File Format</a> and <a href="https://github.com/facebookresearch/StarSpace/#imagespace-learning-image-and-label-embeddings">ImageSpace</a> section for more details on how to use weights in input and label.
 
-# Requirements
-
-StarSpace builds on modern Mac OS, Windows, and Linux distributions. Since it uses C++11 features, it requires a compiler with good C++11 support. These include :
-
-* (gcc-4.6.3 or newer), (Visual Studio 2015), or (clang-3.3 or newer) 
-
-Compilation is carried out using a Makefile, so you will need to have a working **make**.
-
-You need to install <a href=http://www.boost.org/>Boost</a> library and specify the path of boost library in makefile in order to run StarSpace. Basically:
-
-    $wget https://dl.bintray.com/boostorg/release/1.63.0/source/boost_1_63_0.zip
-    $unzip boost_1_63_0.zip
-    $sudo mv boost_1_63_0 /usr/local/bin
-
-Optional: if one wishes to run the unit tests in src directory, <a href=https://github.com/google/googletest>google test</a> is required and its path needs to be specified in 'TEST_INCLUDES' in the makefile.
-
-# Building StarSpace
-
-In order to build StarSpace on Mac OS or Linux, use the following:
-
-    git clone https://github.com/facebookresearch/Starspace.git
-    cd Starspace
-    make
-
-In order to build StarSpace on Windows:
-
-	clone https://github.com/facebookresearch/Starspace.git
-	Follow instructions on how to install boost
-	open MVS\Starspace.sln in Visual Studio
-	Update all project properties: go to Configuration Properties>VC++ Directories and add boost dirs:
-		- Include Directories => <boost_dir>\<boost_version_dir>
-		- Library Directories => <boost_dir>\<boost_version_dir>\stage\lib
-	In Configurations Properties check:
-		- Windows SDK Versions => should be one installed on your computer
-		- Platform Toolset => should be one installed on your computer
-	Optional: if GoogleTest is not installed in the computer unload "matrix_test" and "proj_test"
-	Build the solution
-	
-In order to build StarSpace python wrapper, please refer <a href="https://github.com/facebookresearch/StarSpace/tree/master/python">README</a> inside the directory <a href="https://github.com/facebookresearch/StarSpace/tree/master/python">python</a>.
+# Build Starspace
+Please refer to [BUILD_INSTRUCTIONS.MD](BUILD_INSTRUCTIONS.MD)
+<a href="https://github.com/facebookresearch/StarSpace/tree/master/BUILD_INSTRUCTIONS.MD">BUILD_INSTRUCTIONS.MD</a>
 
 # File Format
 
