@@ -253,15 +253,12 @@ MatrixRow StarSpace::getNgramVector(const string& phrase) {
   return model_->getLHSEmbeddings()->row(id + dict_->nwords() + dict_->nlabels());
 }
 
-string StarSpace::nearestNeighbor(const string& line, int k) {
+void StarSpace::nearestNeighbor(const string& line, int k) {
   auto vec = getDocVector(line, " ");
   auto preds = model_->findLHSLike(vec, k);
-  string output_preds = "";
-  for (auto n: preds) {
-	output_preds += dict_->getSymbol(n.first) + ' ' + to_string(n.second) + "\n";
-    // cout << dict_->getSymbol(n.first) << ' ' << n.second << endl;
+  for (auto n : preds) {
+    cout << dict_->getSymbol(n.first) << ' ' << n.second << endl;
   }
-  return output_preds;
 }
 
 unordered_map<string, float> StarSpace::predictTags(const string& line, int k){

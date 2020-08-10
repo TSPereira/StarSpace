@@ -39,7 +39,7 @@ class StarSpace {
         std::vector<Base>& ids,
         const std::string& sep);
 
-    std::string nearestNeighbor(const std::string& line, int k);
+    void nearestNeighbor(const std::string& line, int k);
 
 
     std::unordered_map<std::string, float> predictTags(const std::string& line, int k);
