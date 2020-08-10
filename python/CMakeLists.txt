@@ -95,8 +95,8 @@ if (WIN32)
     if (NOT ${U_CMAKE_BUILD_TYPE} MATCHES DEBUG)
       # Enforce size-based optimization and link time code generation on MSVC
       # (~30% smaller binaries in experiments).
-      set_target_properties(starwrap APPEND_STRING PROPERTY COMPILE_FLAGS "/Os /GL ")
-      set_target_properties(starwrap APPEND_STRING PROPERTY LINK_FLAGS "/LTCG ")
+      set_property(TARGET starwrap APPEND_STRING PROPERTY COMPILE_FLAGS "/Os /GL ")
+      set_property(TARGET starwrap APPEND_STRING PROPERTY LINK_FLAGS "/LTCG ")
     endif()
   endif()
 
