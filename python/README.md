@@ -74,7 +74,7 @@ The starspace repo in https://github.com/TSPereira/StarSpace.git already has thi
     4.  Under `Linker > All Options > Additional Dependencies` add:
         - StarSpaceLib.lib
         - starspace.lib
-        - <env_dir>\libs\<wanted_python_version>.lib
+        - <env_dir>\libs\ <wanted_python_version>.lib
     5.  Under `Linker > All Options > Additional Options`: delete everything
 9.  Build the Solution
 10. Make the resulting `starwrap.pyd` available to the interpreter by using one of the follow:
