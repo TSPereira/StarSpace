@@ -22,6 +22,7 @@ printDoc
 predictOne
 ```
 
+<br/><br/>
 ## How to build?
 - make sure you have CMake installed. Otherwise install it from [here](https://cmake.org/install/)
 - install Conan c++ package manager from [here](https://conan.io/downloads.html).
@@ -29,9 +30,10 @@ predictOne
 Note: If building directly from the facebook repo it is necessary to make a bug fix on `CMakeLists.txt`.
 *   Replace line 98/99 for:  
 
-
+    ```
     set_property(TARGET starwrap APPEND_STRING PROPERTY COMPILE_FLAGS "/Os /GL ")
     set_property(TARGET starwrap APPEND_STRING PROPERTY LINK_FLAGS "/LTCG ")
+    ```
     
 The starspace repo in https://github.com/TSPereira/StarSpace.git already has this correction built-in.
 
@@ -100,7 +102,7 @@ run
     
     cmake .. -DCMAKE_BUILD_TYPE=Release -DPYTHON_LIBRARY=/<path to anaconda>/envs/<env>/python3.7.dll -DPYTHON_INCLUDE_DIR=/<path to anaconda>/envs/<env>/include/
 
-
+<br/><br/>
 ## How to use?
 API is very easy and straightforward. Please refer `test.py` in `test` directory.
 
