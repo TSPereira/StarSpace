@@ -26,10 +26,8 @@ See the [paper](https://arxiv.org/abs/1709.03856) for more details on how it wor
 
 # Build Starspace
 Please refer to [BUILD_INSTRUCTIONS.MD](BUILD_INSTRUCTIONS.MD)
-<a href="https://github.com/facebookresearch/StarSpace/tree/master/BUILD_INSTRUCTIONS.MD">BUILD_INSTRUCTIONS.MD</a>
 
 # File Format
-
 StarSpace takes input files of the following format. 
 Each line will be one input example, in the simplest case the input has k words, and each
 labels 1..r is a single word:
