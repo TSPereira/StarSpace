@@ -64,24 +64,25 @@ In order to build StarSpace on Mac OS or Linux, use the following commands in te
 ### Windows
 Installation on Windows requires Visual Studio
 
-1.  clone https://github.com/TSPereira/StarSpace.git
-2.  open MVS\Starspace.sln in Visual Studio
-3.  Right-click on the solution on the Solution Explorer pane on the right and select "Retarget solution". Choose the Windows SDK Version and Platform toolset installed on your machine
+1.  clone `https://github.com/TSPereira/StarSpace.git`
+2.  open `MVS\Starspace.sln` in Visual Studio
+3.  Right-click on the solution on the Solution Explorer pane on the right and select `Retarget solution`.  
+    Choose the `Windows SDK Version` and `Platform toolset` installed on your machine
 4.  Update all project properties (one by one):  
-    1. Right-click on the project on the right pane and select Properties
-    2. Under VC++ Directories:
-        - Add to *Include Directories*: C:\Program Files\boost\boost\include\boost_1_63_0
-        - Add to *Library Directories*: C:\Program Files\boost\boost\lib
+    1. Right-click on the project on the right pane and select `Properties`
+    2. Under `VC++ Directories`:
+        - Add to `Include Directories`: C:\Program Files\boost\boost\include\boost_1_63_0
+        - Add to `Library Directories`: C:\Program Files\boost\boost\lib
     
-    3. Under Linker > General (all projects except StarSpaceLib)
-        - Add to *Additional Library Directories*: C:\Program Files\boost\boost\lib
-    4. Check and if needed correct:
-        - Windows SDK Versions: should be the one installed on your computer
-        - Platform Toolset: should be the one installed on your computer and used before
+    3. Under `Linker > General` (all projects except StarSpaceLib)
+        - Add to `Additional Library Directories`: C:\Program Files\boost\boost\lib
+    4. Under `General`, check and if needed correct:
+        - `Windows SDK Versions`: should be the one installed on your computer
+        - `Platform Toolset`: should be the one installed on your computer and used before
     5. Apply and close
     
 5. Optional: if GoogleTest is not installed in the computer unload "matrix_test" and "proj_test"
 6. Build the solution
 
 # Python Wrapper
-In order to build StarSpace python wrapper, please refer <a href="https://github.com/facebookresearch/StarSpace/tree/master/python">README</a> inside the directory <a href="https://github.com/facebookresearch/StarSpace/tree/master/python">python</a>.
+In order to build StarSpace python wrapper, please refer <a href="https://github.com/TSPereira/StarSpace/tree/master/python">README</a> inside the directory <a href="https://github.com/TSPereira/StarSpace/tree/master/python">python</a>.
